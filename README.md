@@ -1,7 +1,5 @@
 # 🚗 Car Management & Fuel Tracking System
 
-**Technical Assignment: AEM Academy**
-
 This project is a **Java-based Car Management & Fuel Tracking System** demonstrating full-stack Java development skills including Spring Boot REST APIs, manual Servlet implementation, and CLI client development.
 
 ---
@@ -17,7 +15,6 @@ The system allows users to:
 ### Key Technologies
 - **Backend:** Spring Boot, Java Servlets, In-Memory Storage
 - **CLI Client:** Java HttpClient, Standalone Application
-- **Architecture:** Service Layer Reuse, RESTful Design
 
 ---
 
@@ -44,7 +41,7 @@ The system is divided into **two main modules**:
 
 ### Base URL
 ```
-http://localhost:8080
+http://localhost:8081
 ```
 
 ### 🔹 Create a Car
@@ -137,7 +134,7 @@ Fuel entry added successfully
 
 **Example:**
 ```
-http://localhost:8080/servlet/fuel-stats?carId=1
+http://localhost:8081/servlet/fuel-stats?carId=1
 ```
 
 **Response (200 OK):**
@@ -239,7 +236,7 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-Server will start at: `http://localhost:8080`
+Server will start at: `http://localhost:8081`
 
 #### 4. Compile the CLI Client
 ```bash
@@ -314,7 +311,7 @@ Average consumption: 7.5 L/100km
 
 #### Step 5: Test via Servlet
 ```bash
-curl "http://localhost:8080/servlet/fuel-stats?carId=1"
+curl "http://localhost:8081/servlet/fuel-stats?carId=1"
 ```
 
 ---
@@ -416,10 +413,10 @@ private static final AtomicLong idCounter = new AtomicLong(0);
 
 ## 🐛 Troubleshooting
 
-### Issue: Port 8080 already in use
+### Issue: Port 8081 already in use
 **Solution:** Change port in `application.properties`:
 ```properties
-server.port=8081
+server.port=8080
 ```
 
 ### Issue: CLI returns "Connection refused"
@@ -437,21 +434,6 @@ public ServletRegistrationBean<FuelStatsServlet> fuelStatsServlet() {
 }
 ```
 
----
-
-## 📚 Learning Outcomes
-
-This project demonstrates:
-1. **Spring Boot REST API** development
-2. **Manual Servlet** implementation (request lifecycle)
-3. **HTTP Client** usage in Java
-4. **In-memory data management**
-5. **Service layer architecture**
-6. **CLI application** development
-7. **Error handling** and validation
-8. **Code reusability** principles
-
----
 
 ## 🔮 Future Enhancements
 
@@ -470,34 +452,10 @@ Potential improvements:
 ---
 
 ## 👨‍💻 Author
+ 
+Completed by: GITEGO Faycal 
 
-**AEM Academy Technical Assignment**  
-Completed by: [Your Name]  
-Duration: 5 days  
-Date: January 2026
-
----
-
-## 📄 Assignment Policies
-
-### AI Usage
-- ✅ Tools like ChatGPT/Copilot are **allowed**
-- ⚠️ Must be able to **explain every line of code**
-- 🎯 Focus on understanding the "why" behind decisions
-
-### Evaluation Criteria
-1. **Code Readability** - Clear, maintainable code
-2. **Error Handling** - Proper 404s, validation
-3. **Service Reuse** - Shared logic between REST and Servlet
-4. **Architecture** - Clean separation of concerns
+Date: January 1st, 2026
 
 ---
 
-## 📞 Questions?
-
-For clarification on requirements or technical issues, please contact the AEM Academy team.
-
----
-
-**Project Status:** ✅ Complete  
-**Last Updated:** January 2026
