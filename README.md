@@ -388,29 +388,6 @@ private static final AtomicLong idCounter = new AtomicLong(0);
 
 ---
 
-## 🎯 Code Quality Features
-
-### 1. Clean Architecture
-- Separation of concerns (Controller → Service → Storage)
-- DTO pattern for data transfer
-- Single Responsibility Principle
-
-### 2. Error Handling
-- Proper HTTP status codes (200, 404, 500)
-- Meaningful error messages
-- Null checks and validation
-
-### 3. Code Readability
-- Clear method names
-- Proper Java naming conventions
-- Comments where needed
-
-### 4. Service Reuse
-- Both REST API and Servlet share the same service logic
-- No code duplication
-
----
-
 ## 🐛 Troubleshooting
 
 ### Issue: Port 8081 already in use
@@ -434,22 +411,6 @@ public ServletRegistrationBean<FuelStatsServlet> fuelStatsServlet() {
 }
 ```
 
-
-## 🔮 Future Enhancements
-
-Potential improvements:
-- [ ] Add database persistence (JPA/Hibernate)
-- [ ] Implement authentication (JWT)
-- [ ] Add input validation (Bean Validation)
-- [ ] Create unit tests (JUnit, Mockito)
-- [ ] Add Swagger/OpenAPI documentation
-- [ ] Implement pagination for car listing
-- [ ] Add filtering and sorting
-- [ ] Create web UI (React/Angular)
-- [ ] Add Docker support
-- [ ] Implement logging (SLF4J)
-
----
 
 ## 👨‍💻 Author
  
